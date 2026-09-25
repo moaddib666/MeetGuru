@@ -1,4 +1,4 @@
-<img align="right" width="400" src="docs/images/demo.gif" alt="The MeetingGuru island: it opens to show the next meeting, pops up a new invite that is accepted, then counts down to a meeting and joins it automatically.">
+<img align="right" width="380" src="docs/images/demo.gif" alt="The MeetingGuru island: it opens to show the next meeting, pops up a new invite that is accepted, then counts down to a meeting and joins it automatically.">
 
 # MeetingGuru
 
@@ -13,12 +13,11 @@ Native Swift and SwiftUI. Works with any CalDAV calendar. No accounts, no cloud 
 [![License: MIT](https://img.shields.io/badge/license-MIT-4DA3FF?style=flat-square)](LICENSE)
 [![CI](https://img.shields.io/github/actions/workflow/status/moaddib666/MeetGuru/ci.yml?branch=main&style=flat-square&label=tests)](https://github.com/moaddib666/MeetGuru/actions/workflows/ci.yml)
 
-```bash
-git clone https://github.com/moaddib666/MeetGuru.git
-cd MeetGuru && make install
-```
-
 <br clear="right">
+
+```bash
+git clone https://github.com/moaddib666/MeetGuru.git && cd MeetGuru && make install
+```
 
 ## A meeting, start to finish
 

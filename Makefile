@@ -40,7 +40,7 @@ demo-gif: build ## Record docs/images/demo.gif (needs Screen Recording permissio
 	ffmpeg -loglevel error -y \
 		-loop 1 -framerate 25 -i scripts/demo-backdrop.png \
 		-framerate 25 -i $(FRAMES)/%05d.png \
-		-filter_complex "[0][1]overlay=shortest=1,fps=20,split[a][b];[a]palettegen=max_colors=200:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle" \
+		-filter_complex "[0][1]overlay=shortest=1,crop=380:270:60:80,fps=20,split[a][b];[a]palettegen=max_colors=200:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle" \
 		docs/images/demo.gif
 	@echo "Wrote docs/images/demo.gif"
 

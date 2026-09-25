@@ -388,8 +388,8 @@ final class AppController {
     private func runTour() {
         let start = Date()
         let standup = MeetingEvent(
-            uid: "tour-standup", title: "Platform standup", start: start.addingTimeInterval(72),
-            end: start.addingTimeInterval(72 + 30 * 60), location: "https://meet.google.com/abc-defg-hij")
+            uid: "tour-standup", title: "Platform standup", start: start.addingTimeInterval(71),
+            end: start.addingTimeInterval(71 + 30 * 60), location: "https://meet.google.com/abc-defg-hij")
         let planning = MeetingEvent(
             uid: "tour-planning", title: "Quarterly planning", start: start.addingTimeInterval(95 * 60),
             end: start.addingTimeInterval(155 * 60), location: "Kyiv office")
@@ -403,12 +403,12 @@ final class AppController {
         syncCompleted(SyncResult(events: [standup, planning], syncTime: start, invites: []))
 
         let steps: [(TimeInterval, () -> Void)] = [
-            (2.0, { self.handle(.openRequested) }),
-            (5.0, { self.handle(.clickedOutside) }),
-            (6.2, { self.syncCompleted(SyncResult(events: [standup, planning], syncTime: Date(), invites: [invite])) }),
-            (9.2, { self.respond(to: invite.id, with: .accepted) }),
-            (20.5, { self.perform(.done, standup) }),
-            (23.0, { NSApp.terminate(nil) }),
+            (0.6, { self.handle(.openRequested) }),
+            (3.8, { self.handle(.clickedOutside) }),
+            (5.0, { self.syncCompleted(SyncResult(events: [standup, planning], syncTime: Date(), invites: [invite])) }),
+            (8.0, { self.respond(to: invite.id, with: .accepted) }),
+            (19.0, { self.perform(.done, standup) }),
+            (21.0, { NSApp.terminate(nil) }),
         ]
         for (delay, step) in steps {
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) { MainActor.assumeIsolated(step) }
