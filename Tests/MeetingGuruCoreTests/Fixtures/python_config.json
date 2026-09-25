@@ -1,0 +1,25 @@
+{
+  "caldav": {
+    "url": "https://dav.privateemail.com/",
+    "username": "someone@example.com",
+    "password": "not-a-real-password",
+    "token": null,
+    "calendar_name": "default",
+    "timeout": 10,
+    "verify_ssl": true,
+    "use_cache": true,
+    "sync_interval": 60,
+    "sync_on_start": true
+  },
+  "alert_advance_minutes": 1,
+  "auto_join_delay_seconds": 5,
+  "tray_update_interval": 10,
+  "show_missed_meetings": true,
+  "notification_sound": true,
+  "sound_volume": 0.6,
+  "debug_mode": false,
+  "tray_color_default": "#ffffff",
+  "tray_color_alert": "#ff4500",
+  "tray_color_warning": "#ffd700",
+  "tray_color_ok": "#00ff00"
+}
